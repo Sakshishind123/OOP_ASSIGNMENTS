@@ -1,0 +1,51 @@
+class compu_engg {
+    String name;
+    int roll_no;
+    long prn;
+    String hobbies;
+
+    public compu_engg() {
+        roll_no = 60;
+        prn = 22210052;
+        hobbies = "dancing, drawing";
+    }
+
+    public static void getName() {
+        String name = "Sneha Manoj Rahate";
+        System.out.println(name);
+    }
+
+    public long getgr() {
+        return prn;
+    }
+}
+
+class student extends compu_engg {
+    String area_of_interest;
+
+    public student() {
+        area_of_interest = "computer science";
+    }
+}
+
+public class assign_3 {
+    public static void main(String args[]) {
+        compu_engg a = new compu_engg();
+        student b = new student();
+
+        // Accessing roll_no via the instance of compu_engg
+        int rollNoA = a.roll_no;
+        // Accessing prn via the instance of compu_engg
+        long prnA = a.prn;
+
+        // Accessing roll_no and area_of_interest via the instance of student
+        int rollNoB = b.roll_no;
+        String areaOfInterestB = b.area_of_interest;
+
+        // Printing values
+        System.out.println("Roll Number A: " + rollNoA);
+        System.out.println("PRN A: " + prnA);
+        System.out.println("Roll Number B: " + rollNoB);
+        System.out.println("Area of Interest B: " + areaOfInterestB);
+    }
+}
